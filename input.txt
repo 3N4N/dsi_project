@@ -1,5 +1,5 @@
 #all instructions are valid in following
-add a0, x0, x1
+add a0, x0, x1 # add instruction
 la a1, hello
 li a3, 5
 addi a2, x0, 5

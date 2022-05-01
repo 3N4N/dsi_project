@@ -1,5 +1,5 @@
 CC     := g++
-CFLAGS := -g -I inc/ -fsanitize=address
+CFLAGS := -std=c++17 -g -I inc/ -fsanitize=address
 LIBS   := -lasan
 
 SRCS   := $(wildcard src/*.cpp)

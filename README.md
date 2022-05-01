@@ -23,18 +23,19 @@ Grammar you need to implement, for the time being
 
 For example,
 
-- add a2, a1, a0is a valid instruction;
-- whereas add a0, a1 is not a valid since it has twooperands instead of three,
-  ref G
-- And add a3 a0 a1 a2 is not valid because of G
-- and dummy a0, a1, a2 is not valid, since the operatoritself is not a valid
-  instruction, ref G
+- `add a2, a1, a0` is a valid instruction;
+- whereas `add a0, a1` is not a valid since it has two operands instead of
+  three, ref G2
+- And `add a3 a0 a1 a2` is not valid because of G0
+- and `dummy a0, a1, a2` is not valid, since the operator itself is not a valid
+  instruction, ref G1
 
 Ignore the line that starts with `#` sign. (Bonus: ignore rest of the line when
 you find a hash sign in the middle of the line)
 
-Please let me clarify this at the very beginning, solving the above problem is not the highest
-priority; we’re mostly interested to learn about your exposure to C++ domain.
+Please let me clarify this at the very beginning, solving the above problem is
+not the highest priority; we’re mostly interested to learn about your exposure
+to C++ domain.
 
 
 [A sample RISC v assembly blog for beginners][1]
@@ -60,7 +61,7 @@ ecall
 - Code optimization using features of latest C++ features
   - For example, Templating, ConstExpr, Casting, Structure.
   - Some tips are available here,https://abseil.io/tips/
-- If you have questions, please understand these are kept deliberately open. Use your
-    best assumption and we like to find how flexible your code is.
+- If you have questions, please understand these are kept deliberately open.
+  Use your best assumption and we like to find how flexible your code is.
 
 [1]: https://medium.com/swlh/risc-v-assembly-for-beginners-387c6cd02c49

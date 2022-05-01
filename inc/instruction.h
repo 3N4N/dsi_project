@@ -13,6 +13,8 @@ public:
     Instruction() {}
     Instruction(std::string opcode, std::vector<std::string> operands);
     friend std::ostream& operator<<(std::ostream&, const Instruction&);
+
+    bool verify();
 };
 
 

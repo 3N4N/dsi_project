@@ -3,6 +3,7 @@
 #include <algorithm>
 
 #include "instruction.h"
+#include "global.h"
 
 using namespace std;
 
@@ -111,9 +112,11 @@ int main()
 
     for (auto const& instrc : s_instrs) {
         Instruction instruction = parse_instruction(instrc);
-        instructions.push_back(instruction);
+        if (instruction.verify()) {
+            instructions.push_back(instruction);
+            cout << instruction;
+        }
 
-        cout << instruction;
     }
 
 

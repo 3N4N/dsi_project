@@ -5,3 +5,4 @@ li a3, 5
 addi a2, x0, 5
 subi a7, x0, 64
 ecall
+enan hey, hey

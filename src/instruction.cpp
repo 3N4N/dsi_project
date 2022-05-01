@@ -1,4 +1,5 @@
 #include "instruction.h"
+#include "global.h"
 #include <iostream>
 
 using namespace std;
@@ -19,4 +20,15 @@ ostream& operator<<(ostream& output, const Instruction& instruction)
     }
     cout << endl;
     return output;
+}
+
+bool Instruction::verify()
+{
+    map<string, int>::iterator p;
+    p = opcode_map.find(opcode);
+
+    if (p == opcode_map.end()) return false;
+    if (operands.size() != p->second) return false;
+
+    return true;
 }

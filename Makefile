@@ -1,13 +1,21 @@
 CC     := g++
-CFLAGS := -std=c++17 -g -I inc/ -fsanitize=address
-LIBS   := -lasan
+
+ifeq ($(OS),Windows_NT)
+	CFLAGS := -std=c++17 -g -I inc/
+	LIBS   :=
+	EXE    := out.exe
+else
+	CFLAGS := -std=c++17 -g -I inc/ -fsanitize=address
+	LIBS   := -lasan
+	EXE    := a.out
+endif
+
 
 SRCS   := $(wildcard src/*.cpp)
 SRCS   := $(filter-out src/test.cpp, $(SRCS))
 OBJS   := $(patsubst src/%.cpp,bin/%.o,$(SRCS))
 DEPS   := $(patsubst src/%.cpp,bin/%.d,$(SRCS))
 DIRS   := src inc bin
-EXE    := a.out
 
 all: $(DIRS) $(EXE)
 

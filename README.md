@@ -2,12 +2,13 @@
 
 ## Overview:
 
-Write an application that will read each line of the input file and generates a
-Data structure to represent the operator, operands and other necessary
+Write an application that will read each line of the input file and generates
+a Data structure to represent the operator, operands and other necessary
 attributes of a RISC v instruction-set.
 
-You need to lexically analyze, if the instruction in each line is valid or not and if valid push them
-in your final list of Instructions and include other attributes of the instruction.
+You need to lexically analyze, if the instruction in each line is valid or not
+and if valid push them in your final list of Instructions and include other
+attributes of the instruction.
 
 Grammar you need to implement, for the time being
 
@@ -27,11 +28,11 @@ For example,
 - whereas `add a0, a1` is not a valid since it has two operands instead of
   three, ref G2
 - And `add a3 a0 a1 a2` is not valid because of G0
-- and `dummy a0, a1, a2` is not valid, since the operator itself is not a valid
-  instruction, ref G1
+- and `dummy a0, a1, a2` is not valid, since the operator itself is not a
+  valid instruction, ref G1
 
-Ignore the line that starts with `#` sign. (Bonus: ignore rest of the line when
-you find a hash sign in the middle of the line)
+Ignore the line that starts with `#` sign. (Bonus: ignore rest of the line
+when you find a hash sign in the middle of the line)
 
 Please let me clarify this at the very beginning, solving the above problem is
 not the highest priority; we’re mostly interested to learn about your exposure
